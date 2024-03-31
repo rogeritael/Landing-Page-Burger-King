@@ -295,3 +295,45 @@ header {
         }
     }
 }
+
+.s-combos {
+    padding: 7rem 0;
+    .highlights {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 3.2rem;
+        .box {
+            border-radius: 12px;
+            background: var(--bege);
+            width: 21.8rem;
+            height: 14.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.9rem;
+            h3 {
+                color: var(--white);
+                text-align: center;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: -0.301px;
+                text-transform: uppercase;
+            }
+        }
+        & > .box {
+            background-color: var(--yellow);
+            width: 26.3rem;
+        }
+        ul {
+            flex: 1;
+            max-width: 92.2rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1.6rem;
+        }
+    }
+}
