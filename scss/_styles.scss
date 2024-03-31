@@ -336,4 +336,125 @@ header {
             gap: 1.6rem;
         }
     }
+    .area-slide {
+        margin-top: 6.2rem;
+        position: relative;
+        height: fit-content;
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6.6rem;
+            height: 6.6rem;
+            background-color: var(--yellow);
+            z-index: 2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.prev {
+                left: -33px;
+            }
+            &.next {
+                right: -33px;
+                transform: translateY(-50%) rotate(180deg);
+            }
+            &.swiper-button-disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+        }
+        .slide-combos {
+            overflow: hidden;
+            .card-combo {
+                width: 100%;
+                height: 49.3rem;
+                border-radius: 6px;
+                overflow: hidden;
+                background-color: var(--bege);
+                .image {
+                    width: 100%;
+                    height: 34rem;
+                    overflow: hidden;
+                    border-bottom: 3px dotted var(--white);
+                    position: relative;
+                    & > img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    button {
+                        position: absolute;
+                        top: 2.5rem;
+                        right: 2.6rem;
+                        z-index: 2;
+                        height: 3.8rem;
+                        width: 3.8rem;
+                        background-color: var(--white);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .info {
+                    padding-top: 3.6rem; 
+                    padding-left: 4.4rem;
+                    // padding-right: ;
+
+                    strong {
+                        color: var(--brown);
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        letter-spacing: -0.201px;
+                        margin-bottom: 1.4rem;
+                        display: block;
+                    }
+                    h3 {
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: 3.2rem;
+                        font-weight: bold;
+                        letter-spacing: 1.447px;
+                        text-transform: uppercase;
+                        color: var(--orange);
+                    }
+                }
+            }
+        }
+    }
+    .ctrl {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4.7rem;
+        .swiper-pagination {
+            position: relative;
+            bottom: 0;
+            width: auto;
+            &-bullet{
+                opacity: 0.5;
+                background-color: var(--yellow);
+                transition: all .3s ease;
+                &-active {
+                    opacity: 1;
+                    background-color: var(--orange);
+                    transform: scale(1.2);
+                }
+            }
+        }
+        button {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            span {
+                color: var(--yellow);
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.4rem;
+                font-weight: bold;
+                letter-spacing: -0.176px;
+                text-transform: uppercase;
+            }
+        }
+    }
 }

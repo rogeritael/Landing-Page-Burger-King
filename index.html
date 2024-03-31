@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>BK Cupons</title>
 </head>
 <body>
@@ -82,35 +83,151 @@
     </section>
     <section class="s-combos">
         <div class="container">
-        <div class="highlights">
-            <div class="box">
-                <img src="img/stars.svg" alt="">
-                <h3>Destaques<br/>impredíveis</h3>
+            <div class="highlights">
+                <div class="box">
+                    <img src="img/stars.svg" alt="">
+                    <h3>Destaques<br/>impredíveis</h3>
+                </div>
+                <ul>
+                    <li>
+                        <div class="box">
+                            <img src="img/carne.svg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="img/frango.svg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="img/sobremesa.svg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="img/acompanha.svg" alt="">
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <ul>
-                <li>
-                    <div class="box">
-                        <img src="img/carne.svg" alt="">
+            <div class="area-slide">
+                <button class="btn prev">
+                    <img src="img/arrow-slide.svg" alt="">
+                </button>
+                <div class="swiper slide-combos">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-combo">
+                                <div class="image">
+                                    <img src="img/combo-01.jpg" alt="">
+                                    <button>
+                                        <img src="img/favorite.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="info">
+                                    <strong>2 CHEDDAR + BATATA PQ + FREE REFIL</strong>
+                                    <h3>R$15,90</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-combo">
+                                <div class="image">
+                                    <img src="img/combo-02.jpg" alt="">
+                                    <button>
+                                        <img src="img/favorite.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="info">
+                                    <strong>1 WHOOPER JR + FREE REFIL</strong>
+                                    <h3>R$10,90</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-combo">
+                                <div class="image">
+                                    <img src="img/combo-02.jpg" alt="">
+                                    <button>
+                                        <img src="img/favorite.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="info">
+                                    <strong>1 COMBO WHOOPER + 1 CHEDDAR</strong>
+                                    <h3>R$24,90</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-combo">
+                                <div class="image">
+                                    <img src="img/combo-01.jpg" alt="">
+                                    <button>
+                                        <img src="img/favorite.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="info">
+                                    <strong>2 CHEDDAR + BATATA PQ + FREE REFIL</strong>
+                                    <h3>R$15,90</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-combo">
+                                <div class="image">
+                                    <img src="img/combo-02.jpg" alt="">
+                                    <button>
+                                        <img src="img/favorite.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="info">
+                                    <strong>1 WHOOPER JR + FREE REFIL</strong>
+                                    <h3>R$10,90</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-combo">
+                                <div class="image">
+                                    <img src="img/combo-02.jpg" alt="">
+                                    <button>
+                                        <img src="img/favorite.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="info">
+                                    <strong>1 COMBO WHOOPER + 1 CHEDDAR</strong>
+                                    <h3>R$24,90</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <div class="box">
-                        <img src="img/frango.svg" alt="">
-                    </div>
-                </li>
-                <li>
-                    <div class="box">
-                        <img src="img/sobremesa.svg" alt="">
-                    </div>
-                </li>
-                <li>
-                    <div class="box">
-                        <img src="img/acompanha.svg" alt="">
-                    </div>
-                </li>
-            </ul>
-        </div>
+                </div>
+                <button class="btn next">
+                    <img src="img/arrow-slide.svg" alt="">
+                </button>
+            </div>
+            <div class="ctrl">
+                <div class="swiper-pagination">
+
+                </div>
+                <button>
+                    <span>confira todas as ofertas</span>
+                    <img src="img/plus.svg" alt="">
+                </button>
+            </div>
         </div>
     </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/scripts.js">
+        // var slide_combos = new Swiper('.slide-combos', {
+        //     slidesPerView: 3
+        // })
+    </script>
 </body>
 </html>
