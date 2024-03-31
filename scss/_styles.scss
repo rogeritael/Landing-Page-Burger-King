@@ -74,3 +74,166 @@ header {
         }
     }
 }
+
+.s-hero {
+    width: 100%;
+    height: 62.3rem;
+    background: linear-gradient(164deg, rgba(239, 225, 218,0.00) 3.82%,
+    #EEE1DA 90.95%);
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .left-container {
+        padding-top: 12rem;
+        flex: 1;
+        max-width: 52.7rem;
+
+        h3 {
+            color: var(--yellow);
+            font-family: 'Ubunto', sans-serif;
+            font-size: 3.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2.2rem;
+            display: flex;
+            gap: 3.7rem;
+            align-items: center;
+
+            &::after {
+                content: '';
+                height: 2px;
+                flex: 1;
+                max-width: 29rem;
+                background: url('../img/line.svg') no-repeat center center;
+                display: inline-block;
+            }
+        }
+        .value {
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 3.7rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                background: url('../img/arrow-btn.svg') no-repeat center center;
+                width: 4.3rem;
+                height: 3.8rem;
+                position: absolute;
+                right: -6.7rem;
+                top: 3rem;
+            }
+
+            h2 {
+                color: var(--yellow);
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 6.5rem;
+                font-weight: bold;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            span {
+                color: var(--brown);
+                font-size: 1.3rem;
+                font-weight: bold;
+                line-height: 2.3rem;
+                letter-spacing: -0.371px;
+            }
+            button {
+                padding: 2.2rem 5.2rem;
+                background-color: var(--brown);
+                border-radius: 6px;
+                box-shadow: 8px 10px 40px 0px rgba(89, 41, 28, 0.60);
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: var(--white);
+            }
+        }
+        
+    }
+    .right-container {
+        flex: 1;
+        max-width: 52.8rem;
+        background-color: var(--yellow);
+        height: 66.3rem;
+        border-radius: 0 0 12px 12px;
+        padding-top: 9.5rem;
+        padding-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        margin-right: 3rem;
+
+        .image {
+            position: absolute;
+            width: 68.4rem;
+            height: 49.2rem;
+            img {
+                position: absolute;
+                &.refri {
+                    left: 0;
+                    top: 2.5rem;
+                    z-index: 1;
+                }
+                &.fritas {
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+                &.lanche {
+                    left: 5.2rem;
+                    bottom: 0;
+                    z-index: 2;
+                }
+                &.logo {
+                    right: 1rem;
+                    bottom: 0.6rem;
+                    z-index: 3;
+                }
+            }
+        }
+        .offer {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            gap: 1.6rem;
+            position: relative;
+            &:before {
+                content: '';
+                width: 8rem;
+                height: 1.4rem;
+                background: url('../img/line-left.svg') no-repeat center center;
+                display: inline-block;
+            }
+            &::after {
+                content: '';
+                width: 8rem;
+                height: 1.4rem;
+                background: url('../img/line-right.svg') no-repeat center center;
+                display: inline-block;
+            }
+            p{
+                color: var(--white);
+                font-size: 1.5rem;
+                line-height: 2.3rem;
+                display: flex;
+                align-items: center;
+                img {
+                    margin-right: 1.6rem;
+                }
+                strong {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
