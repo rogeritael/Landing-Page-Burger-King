@@ -63,12 +63,17 @@ header {
                     display: flex;
                     align-items: center;
                     gap: 1.1rem;
+                    
                     span {
                         color: var(--brown);
                         font-family: 'Ubuntu', sans-serif;
                         font-size: 1.4rem;
                         font-weight: bold;
                         text-transform: uppercase;
+                        transition: color .3s ease;
+                        &:hover {
+                            color: var(--orange);
+                        }
                     }
                 }
             }
@@ -155,6 +160,7 @@ header {
                 font-weight: bold;
                 text-transform: uppercase;
                 color: var(--white);
+                animation: pulse 2s infinite;
             }
         }
         
@@ -184,21 +190,26 @@ header {
                     left: 0;
                     top: 2.5rem;
                     z-index: 1;
+                    animation: fadeLeft 1s forwards;
                 }
                 &.fritas {
                     top: 0;
                     right: 0;
                     z-index: 1;
+                    animation: fadeRight 1s forwards;
                 }
                 &.lanche {
                     left: 5.2rem;
                     bottom: 0;
                     z-index: 2;
+                    animation: fadeUp 1s forwards;
                 }
                 &.logo {
                     right: 1rem;
                     bottom: 0.6rem;
                     z-index: 3;
+                    opacity: 0;
+                    animation: zoomIn 1s .5s forwards;
                 }
             }
         }
@@ -286,6 +297,10 @@ header {
         justify-content: center;
         gap: 1.9rem;
         padding: 3rem 0;
+        transition: background-color .3s ease;
+        &:hover {
+            background-color: var(--bege);
+        }
         span {
             color: var(--blue);
             font-family: 'Ubuntu', sans-serif;
@@ -313,6 +328,7 @@ header {
             justify-content: center;
             flex-direction: column;
             gap: 0.9rem;
+
             h3 {
                 color: var(--white);
                 text-align: center;
@@ -334,6 +350,16 @@ header {
             align-items: flex-start;
             justify-content: space-between;
             gap: 1.6rem;
+
+            li {
+                .box {
+                    transition: all .3s ease;
+                    &:hover {
+                        background-color: var(--brown);
+                        box-shadow: 0px 10px 40px 0px rgba(89, 41, 28, 0.60);
+                    }
+                }
+            }
         }
     }
     .area-slide {
@@ -371,8 +397,15 @@ header {
                 width: 100%;
                 height: 49.3rem;
                 border-radius: 6px;
-                overflow: hidden;
                 background-color: var(--bege);
+                overflow: hidden;
+                &:hover {
+                    .image {
+                        & > img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
                 .image {
                     width: 100%;
                     height: 34rem;
@@ -383,6 +416,7 @@ header {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        transition: transform .5s ease;
                     }
                     button {
                         position: absolute;
@@ -447,6 +481,11 @@ header {
             display: flex;
             align-items: center;
             gap: 1.4rem;
+            &:hover {
+                span {
+                    color: var(--orange);
+                }
+            }
             span {
                 color: var(--yellow);
                 font-family: 'Ubuntu', sans-serif;
@@ -454,7 +493,143 @@ header {
                 font-weight: bold;
                 letter-spacing: -0.176px;
                 text-transform: uppercase;
+                transition: color .3s ease;
             }
         }
+    }
+}
+
+footer {
+    .main-area {
+        background-color: var(--brown);
+        padding-top: 4.9rem;
+        padding-bottom: 4.4rem;
+        
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & > ul {
+                gap: 3.5rem;
+                li {
+                    a {
+                        color: var(--white);
+                        font-size: 1.5rem;
+                        font-family: 'Ubuntu', sans-serif;
+                        letter-spacing: -0.429px;
+                        transition: color .3s ease;
+                        &:hover {
+                            color: var(--yellow);
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            width: 9.6rem;
+            height: 9.6rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 3.1rem;
+            span {
+                color: var(--white);
+                font-size: 1.5rem;
+                font-family: 'Ubuntu', sans-serif;
+                letter-spacing: -0.429px;
+            }
+            ul {
+                gap: 2.3rem;
+                li {
+                    a {
+                        width: 6.4rem;
+                        height: 6.4rem;
+                        background-color: #5D2A1C;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: background-color .3s ease;
+                        &:hover {
+                            background-color: var(--orange);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copy {
+        background-color: #5D2A1C;
+        padding: 1.4rem 0;
+        text-align: center;
+        p {
+            color: var(--white);
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            letter-spacing: -0.4px;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeLeft{
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeRight{
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeUp{
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes zoomIn{
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }

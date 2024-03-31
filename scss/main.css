@@ -71,6 +71,10 @@ header nav ul li a span {
   font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+header nav ul li a span:hover {
+  color: var(--orange);
 }
 
 .s-hero {
@@ -149,6 +153,7 @@ header nav ul li a span {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--white);
+  animation: pulse 2s infinite;
 }
 .s-hero .right-container {
   flex: 1;
@@ -177,21 +182,26 @@ header nav ul li a span {
   left: 0;
   top: 2.5rem;
   z-index: 1;
+  animation: fadeLeft 1s forwards;
 }
 .s-hero .right-container .image img.fritas {
   top: 0;
   right: 0;
   z-index: 1;
+  animation: fadeRight 1s forwards;
 }
 .s-hero .right-container .image img.lanche {
   left: 5.2rem;
   bottom: 0;
   z-index: 2;
+  animation: fadeUp 1s forwards;
 }
 .s-hero .right-container .image img.logo {
   right: 1rem;
   bottom: 0.6rem;
   z-index: 3;
+  opacity: 0;
+  animation: zoomIn 1s 0.5s forwards;
 }
 .s-hero .right-container .offer {
   display: flex;
@@ -276,6 +286,10 @@ header nav ul li a span {
   justify-content: center;
   gap: 1.9rem;
   padding: 3rem 0;
+  transition: background-color 0.3s ease;
+}
+.s-offer button:hover {
+  background-color: var(--bege);
 }
 .s-offer button span {
   color: var(--blue);
@@ -326,6 +340,13 @@ header nav ul li a span {
   justify-content: space-between;
   gap: 1.6rem;
 }
+.s-combos .highlights ul li .box {
+  transition: all 0.3s ease;
+}
+.s-combos .highlights ul li .box:hover {
+  background-color: var(--brown);
+  box-shadow: 0px 10px 40px 0px rgba(89, 41, 28, 0.6);
+}
 .s-combos .area-slide {
   margin-top: 6.2rem;
   position: relative;
@@ -364,8 +385,11 @@ header nav ul li a span {
   width: 100%;
   height: 49.3rem;
   border-radius: 6px;
-  overflow: hidden;
   background-color: var(--bege);
+  overflow: hidden;
+}
+.s-combos .area-slide .slide-combos .card-combo:hover .image > img {
+  transform: scale(1.1);
 }
 .s-combos .area-slide .slide-combos .card-combo .image {
   width: 100%;
@@ -379,6 +403,7 @@ header nav ul li a span {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.5s ease;
 }
 .s-combos .area-slide .slide-combos .card-combo .image button {
   position: absolute;
@@ -439,6 +464,9 @@ header nav ul li a span {
   align-items: center;
   gap: 1.4rem;
 }
+.s-combos .ctrl button:hover span {
+  color: var(--orange);
+}
 .s-combos .ctrl button span {
   color: var(--yellow);
   font-family: "Ubuntu", sans-serif;
@@ -446,4 +474,129 @@ header nav ul li a span {
   font-weight: bold;
   letter-spacing: -0.176px;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+footer .main-area {
+  background-color: var(--brown);
+  padding-top: 4.9rem;
+  padding-bottom: 4.4rem;
+}
+footer .main-area ul {
+  display: flex;
+  align-items: center;
+}
+footer .main-area .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .main-area .container > ul {
+  gap: 3.5rem;
+}
+footer .main-area .container > ul li a {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: -0.429px;
+  transition: color 0.3s ease;
+}
+footer .main-area .container > ul li a:hover {
+  color: var(--yellow);
+}
+footer .main-area .logo {
+  width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .main-area .social {
+  display: flex;
+  align-items: center;
+  gap: 3.1rem;
+}
+footer .main-area .social span {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: -0.429px;
+}
+footer .main-area .social ul {
+  gap: 2.3rem;
+}
+footer .main-area .social ul li a {
+  width: 6.4rem;
+  height: 6.4rem;
+  background-color: #5D2A1C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+footer .main-area .social ul li a:hover {
+  background-color: var(--orange);
+}
+footer .copy {
+  background-color: #5D2A1C;
+  padding: 1.4rem 0;
+  text-align: center;
+}
+footer .copy p {
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.4px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=main.css.map */
